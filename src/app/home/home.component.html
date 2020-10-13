@@ -1,0 +1,21 @@
+<h1>Speech to Text Testcase Converter</h1>
+<div class="container">
+  <div class="box">
+    <h2>Speech Input</h2>
+    <span *ngIf='isListening'>🎙️</span>
+    <span *ngIf='!isListening'>🛑🎙️</span>
+  
+    <button (click)='saveNotes()'>
+      Save Note
+    </button>
+    <button (click)="micFunc()">
+      Start/Stop
+    </button>
+  
+    <p>{{note}}</p>
+  </div>
+  <div class="box">
+    <h2>Final Output</h2>
+    <div *ngFor='let a of savedNotes'>{{a}}<br></div>
+  </div>
+</div>
